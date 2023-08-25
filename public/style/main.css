@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Karla:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap');
+:root{
+    --button-colot:#F08080;
+    --font-width-reg:400 ;
+    --font-width-bold:700 ;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+header{
+    color: var(--button-colot);
+    background: linear-gradient(135deg,#4e085f,#153677);
+    height: 80px;
+    width: auto;
+ 
+    & >h1{
+        text-align: center;
+        transform: translatex(0px);
+        padding-top: 10px;
+       visibility: hidden;
+       animation: dots 0.5s linear forwards;
+       animation-delay: 2s;
+    }
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+    font-family: 'poppins' ,sans-serif;
+
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px ;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    
+    & >h2{
+        color: #002765;
+        display: flex ;
+        align-items: center;
+        margin-bottom: 20px;
+        &> img{
+            width: 30px;
+            margin-left: 10px;
+        }
+    }
+    
+    
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    
+    & > form{
+
+     & > input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+    }
+   
+    &> button{
+        border:none;
+        outline: none;
+        
+       background-color: var(--button-colot);
+        font-weight: var(--font-width-bold);
+        padding: 16px 50px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 40px;
+        margin-left: 124px;
+        
+    } 
+ }}
+ 
+ ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 14px 50px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+ul li button{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: #333;
+    background-color:var(--button-colot) ;
+    border: none;
+    right: 0;
+    font-size: 18px;
+}
+ul li.cheked{
+    color: #555;
+    text-decoration: line-through;
+   
+}
+
+
+@keyframes dots {
+    100%{
+        transform: translatex(20px);
+        visibility: visible;
+    }
+ }
